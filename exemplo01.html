@@ -15,10 +15,17 @@
         vw tamanho relativo a largura da tela
         vh tamanho relativo a altura da tela
     */
+
+    *{
+        margin: 0;
+        padding: 0;
+    }
+
     .mae{
         background-color: lightgray;
-        width: 50vw;
-        height: 300px;
+        width: 100vw;
+        height: 100vh;
+        box-sizing: border-box;
     }
 
     .box1{
@@ -31,22 +38,57 @@
 
     .box2{
         background-color: green;
-        width: 50vw;
+        width: 85vw;
+        min-width: 500px;
+
         height: 50px;
     }
 
     .box3{
         background-color: blue;
         width: 100px;
-        height: 50px;
+        height: 100px;
+        border: 10px solid black;
+        margin: 10px;
+        padding: 5px;
+        color: white;
     }
+
+    .box4{
+        border: 1px solid black;
+        margin: 5px;
+        padding: 5px;
+    }
+
+    .box4-pai{
+        font-size: 18px;
+    }
+
+    .box4-filho{
+        font-size: 1.2em;
+    }
+
+    .box4-neto{
+        font-size: 1.2em;
+    }
+    
 </style>
 
 <body>
     <div class="mae">
-        <div class="box1"></div>
-        <div class="box2"></div>
-        <div class="box3"></div>
+        <div class="box1">Box 1</div>
+        <div class="box2">Box 2</div>
+        <div class="box3">Olá</div>
+
+        <div class="box4 box4-pai">
+            Box Pai
+            <div class="box4 box4-filho">
+                Box Filho
+                <div class="box4 box4-neto">
+                    Box Neto
+                </div>
+            </div>
+        </div>
     </div>
     
 </body>
